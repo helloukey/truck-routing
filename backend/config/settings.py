@@ -44,7 +44,9 @@ USE_I18N = False
 USE_TZ = True
 
 # Built frontend (frontend/dist) served at the site root; "/" returns index.html.
-WHITENOISE_ROOT = Path(os.environ.get("FRONTEND_DIST", BASE_DIR.parent / "frontend" / "dist"))
+# Absent on Vercel, where the CDN serves the frontend and Django only handles /api.
+_frontend_dist = Path(os.environ.get("FRONTEND_DIST", BASE_DIR.parent / "frontend" / "dist"))
+WHITENOISE_ROOT = _frontend_dist if _frontend_dist.is_dir() else None
 WHITENOISE_INDEX_FILE = True
 WHITENOISE_MAX_AGE = 3600
 
