@@ -13,7 +13,7 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     FRONTEND_DIST=/app/frontend/dist \
     PORT=8000
 WORKDIR /app/backend
-COPY backend/requirements.txt ./
+COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
 COPY --from=frontend /app/frontend/dist /app/frontend/dist

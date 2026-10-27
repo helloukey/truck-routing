@@ -4,7 +4,7 @@ A React + Django app that helps a truck driver pick the safest route. It compare
 truck routes using the forecast weather at the moment the truck reaches each point, the
 truck's load weight, and travel time.
 
-**Live demo:** _add the Vercel URL here_ · **Walkthrough:** _add the Loom link here_
+**Live demo:** https://truck-routing-five.vercel.app · **Walkthrough:** _add the Loom link here_
 
 ![screenshot](docs/screenshot.png)
 

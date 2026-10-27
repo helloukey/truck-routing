@@ -1,2 +1,9 @@
-# Runtime dependencies for the Vercel Python function (api/index.py).
--r backend/requirements.txt
+# Runtime dependencies (Vercel function, Docker image, local dev).
+Django>=5.2,<6
+djangorestframework==3.18.3
+httpx==0.28.1
+shapely==2.2.0
+flexpolyline==0.1.0
+whitenoise==6.12.0
+gunicorn==26.2.0
+python-dotenv==1.2.4
