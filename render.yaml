@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: truck-weather-routing
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/geocode
+    envVars:
+      - key: HERE_API_KEY
+        sync: false # set in the Render dashboard
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_DEBUG
+        value: "0"
